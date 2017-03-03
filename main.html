@@ -1,0 +1,23 @@
+<head>
+  <title>Placeholder</title>
+</head>
+<body>
+  <p>{{> loginButtons}}</p>
+  <h1>Find a Video Game</h1>
+  {{> searchForm}}
+  {{> gameList}}
+  <h4>Information Provided by IGDB</h4>
+</body>
+<template name="gameList">
+	<ul>
+		{{#each getName}}
+			<li class="game">{{this}}</li>
+		{{/each}}
+	</ul>
+</template>
+<template name="searchForm">
+	<form>
+		<input type="text" name="searchValue">
+		<input type="submit" value="Search">
+	</form>
+</template>
